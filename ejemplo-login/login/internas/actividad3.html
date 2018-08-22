@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Actividad 3</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+</head>
+
+
+
+<body>
+	<header>
+		<h1>Educación Vial para niños</h1>
+		<nav>
+			<a href="menuPrincipal.html">Atrás</a>
+			<a href="../index.php">Salir</a>
+		</nav>
+	</header>
+	
+	<script type="text/javascript">
+	
+		function validar() {
+			var respuesta = document.getElementById("respuesta").value;
+		}
+
+	</script>
+
+
+	<script type="text/javascript">
+	//aquí la solución
+
+	var respuestaCorrecta = new Array("pare2", "30km/h1", "noEntre1");
+			
+			function comprobarRadio(matriz){
+			
+				var numeroRespuestasOK=0;
+				var numeroRespuestasKO=0;
+				var solucion = document.getElementById("solucion");
+				var tablaResultados ="<table border='1'>";
+				
+				for(j=0; j< matriz.length; j++){
+				var radios = document.getElementsByName(j+1);
+					for(i=0; i< radios.length;i++){
+						if (radios[i].checked){
+						var valor =  radios[i].value;
+							if(valor == matriz[j]) {
+							tablaResultados+= "<tr><td>Respuesta correcta: </td>"+ "<td>"+ valor + "</td></tr>";
+							numeroRespuestasOK++;
+							break;
+							}else {
+							tablaResultados+= "<tr><td>Respuesta incorrecta: </td><td>"+ valor + "</td></tr>";
+							numeroRespuestasKO++;
+							break;
+							}
+						}
+					}
+					
+					
+				}
+				var numeroRespuestasNulas=matriz.length - (numeroRespuestasOK + numeroRespuestasKO);
+				tablaResultados+="<tr><td>Respuestas: </td><td>Pare: "+"imagen 2"+"<br/>30 km/h: "+ "imagen 1"+"<br/>No Entre: "+ "imagen 1"+"</td></tr></table>";
+				solucion.innerHTML = tablaResultados;
+		}
+
+	</script>
+
+	<main>
+		<aside>
+			<section class="uno">
+				<img src="../images/comenta.jpg" title="lapiz" description="idActividad">
+				<section class="activity">
+					<h2>Selecciona</h2>
+					<p>Selecciona la señal que crees que es la correcta</p>
+				</section>
+			</section>
+			<br>
+			<br>
+			
+			<br>
+
+							<!-- <div id="contenedor">
+							<h3>Señal Pare</h3>
+							<table style="float:left; border: 1px solid white; margin-right:1.5em;">
+							 <tr>
+									<td><input type="radio" name="img" value="i1" class="pare"><img src="../images/pare2.jpg"></td>
+									<td><input type="radio" name="img" value="i2" class="pare"><img src="../images/pare1.jpg"></td>
+									<td><input type="radio" name="img" value="i3" class="pare"><img src="../images/pare3.jpg"></td>
+									<td>A4<input type="radio" value="a4" name="1" /></td> 
+							 </tr> 
+							 <tr>
+								  	<td><h3>Límite de velocidad 30km/</h3></td>
+								 	<td><h3>h</h3></td>
+							 </tr>
+							 <tr>
+									
+									<td><input type="radio" name="img2" value="m1" class="pare"><img src="../images/30.png"></td>
+									<td><input type="radio" name="img2" value="m2" class="pare"><img src="../images/301.png"></td>
+									<td><input type="radio" name="img2" value="m3" class="pare"><img src="../images/302.png"></td>
+							 </tr> 
+							 <tr><td><h3>No Entre</h3></td></tr>
+							 <tr>
+									<td><input type="radio" name="img3" value="g1" class="pare"><img src="../images/noEntre.jpg"></td>
+									<td><input type="radio" name="img3" value="g2" class="pare"><img src="../images/noEntre1.jpg"></td>
+									<td><input type="radio" name="img3" value="g3" class="pare"><img src="../images/noEntre2.jpg"></td>
+							 </tr> 
+							
+							 <tr> <td colspan="2"> 
+								 <input type="button" value="Corregir" onclick="comprobarRadio(respuestaCorrecta)" /></td></tr>
+							</table>
+							  <div id="solucion"></div>
+							 </div> -->
+
+
+
+							 <div id="contenedor">
+							
+							<table style="float:left; border: 1px solid white; margin-right:.5em;">
+							 <tr>
+									<td><img src="../images/pare2.jpg" class="pare"><input type="radio" value="pare1" name="1" /></td>
+									<td><img src="../images/pare1.jpg" class="pare"><input type="radio" value="pare2" name="1"/></td>
+									<td><img src="../images/pare3.jpg" class="pare"><input type="radio" value="pare3" name="1" /></td>
+									<!-- <td>A4<input type="radio" value="a4" name="1" /></td> -->
+							 </tr> 
+							 <tr>
+									<td><img src="../images/30.png" class="pare"><input type="radio" value="30km/h1" name="2" /></td>
+									<td><img src="../images/301.png" class="pare"><input type="radio" value="30km/h2" name="2"/></td>
+									<td><img src="../images/302.png" class="pare"><input type="radio" value="30km/h3" name="2" /></td>
+									<!-- <td>B4<input type="radio" value="b4" name="2" /></td> -->
+							 </tr> 
+							 <tr>
+									<td><img src="../images/noEntre.jpg" class="pare"><input type="radio" value="noEntre1" name="3" /></td>
+									<td><img src="../images/noEntre1.jpg" class="pare"><input type="radio" value="noEntre2" name="3"/></td>
+									<td><img src="../images/noEntre2.jpg" class="pare"><input type="radio" value="noEntre3" name="3" /></td>
+									<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+							 </tr> 
+							 
+							 <tr> <td colspan="2"> <br>
+							 <input type="button" value="Corregir" onclick="comprobarRadio(respuestaCorrecta)" /></td></tr>
+							</table>
+							  <div id="solucion"></div>
+							 </div>
+		
+		</aside>
+		<section>
+			<br>
+			<h3>Comenta</h3>
+			<p>¿Para qué sirve estas señales?¿Sirven para peatones o conductores?</p>
+			<form name="form" action="logica.php" method="post" onsubmit="return validar();">
+				<br><br>
+				<br><br><br>
+				<textarea name="respuesta" id="respuesta" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea><br><br><br><br><br><br>
+
+				<textarea name="respuesta" id="respuesta" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea><br><br><br><br><br><br>
+
+				<textarea name="respuesta" id="respuesta" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea><br><br><br>
+				<input type="submit" value="Guardar" class="btn-enviar" id="guardar"/>
+			</form>
+			
+		</section>
+	</main>
+	<footer>
+		<h6>
+			Creative Commons | Power by <a href="">@bekyLuzcando</a>
+		</h6>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Actividad ...</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/hojaestilo.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<body>
+	<header>
+		<h1>Educación Vial para niños</h1>
+		<nav>
+			<a href="menuPrincipal2.html">Atrás</a>
+			<a href="../index.php">Salir</a>
+		</nav>
+	</header>
+	
+	<script type="text/javascript">
+	
+		function validar() {
+			var respuesta1 = document.getElementById("respuesta1").value;
+			var respuesta2 = document.getElementById("respuesta2").value;
+		}
+
+	</script>
+
+	<main>
+
+		<div class="container">
+		  <div class="well"><h2 class="text-center">Luquitas en la ciudad</h2></div>
+		</div>
+
+		<aside>
+			<section class="uno">
+				<img src="../images/lee.jpg" title="lapiz" description="idActividad">
+				<section class="activity">
+					<h2>Lee y responde</h2>
+					<h4>Lee el cuento de Luquitas en la ciudad, luego responde la pregunta</h4>
+
+
+					<p class="lead" style="color:#4FC3F7;">Había una vez una familia que vivía en el campo, alejado de la ciudad. Luquitas, el niño más pequeño de la familia, tenía 9 años de edad. A él le gustaba mucho estudiar y ayudar en las tareas del hogar, incluso estaba a cargo de los animalitos de la casa: un gato llamado Chispi y un perro llamado Chori.</p>
+				<p class="lead" style="color:#B39DDB;">Todos los días sábados, la familia de Luquitas viajaba a la ciudad a vender algunas cosas que se producían en su granja. Otros vecinos también hacían lo mismo. Un día, luego de haber terminado de vender los productos, la familia decidió conocer un poco de la ciudad. Luquitas, que era muy observador, notó que las personas cruzaban la calle por unas líneas blancas pintadas sobre el asfalto. Luquitas preguntó: ¿Cómo se llaman esas líneas blancas?, a lo que su padre le respondió: se llama paso cebra. ¿Cebra como el animal?, así es Luquitas, se llama así en honor a los colores que tiene la cebra. Luquitas asintió en señal de entendimiento. ¿Y para qué sirven? Luquitas replicó. Sirven para que los peatones crucen las intersecciones – dijo su madre – y además lo hagan con seguridad, sin peligro de ser atropellados – adicionó su padre –. En todo momento, la circulación la hacían por la vereda, sólo usaban la calle para cruzar las intersecciones. Observaron a lo lejos otra intersección, la cual tenía dos semáforos: uno vehicular y otro peatonal. En esa intersección, los vehículos se detenían frente a la luz roja del semáforo vehicular y los peatones cruzaban con luz verde del semáforo peatonal. Cuando llegaron a esa intersección, el semáforo peatonal estaba en rojo, por lo que se detuvieron. Mientras tanto los vehículos se desplazaban por la calle. Otros peatones también estaban esperando la luz verde del semáforo peatonal. Cuando pasaron todos los vehículos, pero aún el semáforo peatonal estaba en rojo, Luquitas quiso cruzar, pero no pudo, dado que su madre estaba sosteniendo su mano. Luquitas preguntó ¿si todos los vehículos ya cruzaron, entonces, nosotros podemos cruzar también? No Luquitas – respondió su padre – y continuó – debemos esperar hasta que el semáforo vehicular esté en rojo y nuestro semáforo esté en verde, sin importar si vienen o no vehículos –, pero ¿por qué esperar para cruzar si ya no hay más vehículos? – replicó Luquitas –. Su madre respondió: sólo en ese caso es seguro cruzar. Luquitas pensó, que talvez algún vehículo pueda venir rápidamente, considerando que aún tienen la luz verde, por lo que puede ser peligroso para los peatones que intentan cruzar cuando no tienen el derecho de hacerlo. Finalmente cruzaron esa intersección y llegaron a un parque, en donde comieron muchos helados.</p>
+				<p class="lead" style="color:#64DD17;">Cerca de las 17h00, iniciaron su viaje de regreso a casa. Luquitas estaba muy pensativo, recordando todos los acontecimientos que vivió en la ciudad. Concluyó que para que no existan accidentes de tránsito, los peatones y conductores deben respetar las señales de tránsito. Asimismo, deben respetarse mutuamente, dado que todos tienen derechos, pero también tiene deberes que cumplir.</p>
+				<p class="lead" style="color:#4FC3F7;">Llegaron a casa, Chispi y Chori estaban muy felices de verlos. Luego de que Luquitas los alimentó, se fueron a dormir. Al día siguiente, Chispi, Chori y Luquitas salieron al parque a jugar, pero para llegar a éste debían pasar por varias intersecciones, las cuales, no tenían paso cebra, ni semáforos peatonales, ni semáforos vehiculares, ¿entonces se le ocurrió una gran idea?...</p><br>
+				<p class="lead" style="color:#B39DDB;"><b>¿Qué crees que se le ocurrió a Luquitas?</b></p><br><br>
+				<textarea name="respuesta1" id="respuesta1" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea>
+				</section>
+
+			</section>
+			
+		</aside>
+		<section>
+			<br>
+			<div class="row">
+			  <div class="col-sm-2"><img src="../images/lee.jpg" title="lapiz" class="dos" description="idActividad"></div>
+			  <div class="col-sm-10"><h2>Responde</h2>
+					<h4>En base del cuento Luquitas en la ciudad, responde las siguientes preguntas</h4></div>
+			</div><br><br>
+			<form name="form" action="logica.php" method="post" onsubmit="return validar();">
+				<h4>¿Cómo se llaman las líneas blancas pintadas en el asfalto y para qué sirven?</h4><br>
+				<textarea name="respuesta1" id="respuesta1" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea>
+				<br><br><br>
+				<h4>¿Cuándo se debe cruzar una intersección semaforizada?</h4><br>
+				<textarea name="respuesta2" id="respuesta2" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea>
+				<br><br>
+				<h4>¿Qué debemos hacer para cruzar una intersección cualquiera con seguridad? Menciona tres aspectos.</h4><br>
+				<textarea name="respuesta2" id="respuesta2" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea>
+				<br><br>
+				<h4>Los padres de Luquitas eran buenos peatones, menciona al menos dos características de ellos.</h4><br>
+				<textarea name="respuesta2" id="respuesta2" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea>
+				<br><br>
+				<input type="submit" value="Guardar" class="btn-enviar" id="guardar"/>
+			</form>
+			
+		</section>
+	</main>
+	<footer>
+		<h6>
+			Creative Commons | Power by <a href="">@bekyLuzcando</a>
+		</h6>
+	</footer>
+</body>
+</html>

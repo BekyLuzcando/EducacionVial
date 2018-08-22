@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Actividad 5</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<body>
+	<header>
+		<h1>Educación Vial para niños</h1>
+		<nav>
+			<a href="menuPrincipal.html">Atrás</a>
+			<a href="../index.php">Salir</a>
+		</nav>
+	</header>
+	
+	<script type="text/javascript">
+	
+		function validar() {
+			var respuesta1 = document.getElementById("respuesta1").value;
+			var respuesta2 = document.getElementById("respuesta2").value;
+		}
+
+	</script>
+
+	<main>
+
+		<div class="container">
+		  <div class="well"><h2 class="text-center">Luquitas y su viaje a la escuela</h2></div>
+		</div>
+
+		<aside>
+			<section class="uno">
+				<img src="../images/lee.jpg" title="lapiz" description="idActividad">
+				<section class="activity">
+					<h2>Lee</h2>
+					<h4>Lee lo que le pasó a Luquitas en su viaje a la escuela</h4>
+				</section>
+				<p class="lead" style="color:#4FC3F7;">Luquitas era un niño muy amable y colaborador. Le gustaba mucho ir a la escuela porque ahí aprendía muchas cosas.</p>
+				<p class="lead" style="color:#B39DDB;">Un día, Luquitas y su madre iban camino a la escuela, y encontraron a un anciano que quería cruzar la calle; pero no podía hacerlo, porque no había una señal de ceda el paso o de pare en esa calle. Entonces Luquitas y su mamá lo ayudaron a cruzar. El anciano quedó muy agradecido y se fue diciendo que ojalá hubieran más personas como ellos. Luquitas estaba muy feliz de haberlo ayudado.</p>
+				<p class="lead" style="color:#64DD17;"><img src="../images/unaVia.jpg" title="via" description="idVia" class="img">Estaban a punto de cruzar una intersección cuando apareció un vehículo circulando en dirección contraria a señal colocada en la vía. Se dieron un gran susto, dado que tuvieron que detenerse. Su madre replicó: por eso Luquitas debes ver siempre ambos lados de la carretera. Luquitas estaba de acuerdo.</p>
+				<p class="lead" style="color:#4FC3F7;"><img src="../images/30km.jpg" title="via" description="idVia" class="img">Luquitas, su mamá y otros niños de su escuela estaban esperando en la última intersección antes del ingreso a la escuela, cuando de repente observaron que un vehículo pasó muy rápido. La madre de Luquitas les dijo que tal vez ese vehículo iba a una mayor velocidad a la que estaba marcada en la vía. Luquitas miró la señal con un número 30 grande con un círculo rojo.</p>
+				<p class="lead" style="color:#B39DDB;"><img src="../images/bubble.jpg" title="via" description="idVia" class="img">Ya en la escuela, Luquitas contó a su maestra lo ocurrido. Otros niños habían tenido experiencias similares. Mientras estaban conversando, uno de ellos sugirió que se haga una semana de buenos hábitos viales con el fin de que toda la ciudadanía se entere de lo que bien hacer en la vía. Otra niña mencionó que cada niño haga una señal y lo explique en esa semana. Otro niño dijo que se haga una dramatización con la señal pare, y así todos aportaron ideas para esa semana de seguridad vial.</p>
+				<p class="lead" style="color:#64DD17;"><img src="../images/letrero.jpg" title="via" description="idVia" class="img">Prepararon todas las actividades e invitaron a toda la gente de la ciudad a la semana de buenos hábitos viales. Todos quedaron muy agradecidos con la escuela, ya algunos de ellos no conocían ciertas señales de tránsito y cómo actuar ante ellas.</p>
+				<p class="lead" style="color:#4FC3F7;">A partir de esa semana, los conductores y peatones fueron más cordiales y prudentes. Sin embargo, cada año, en esa ciudad, se realiza la semana de seguridad vial para recordarles que deben respetar las señales de tránsito.</p>
+			</section>
+			
+		</aside>
+		<section>
+			<br>
+			<h3>Comenta</h3>
+			<h4>Escribe el nombre de las señales regulatorias que se nombra en el cuento</h4><br><br>
+			<form name="form" action="logica.php" method="post" onsubmit="return validar();">
+				<textarea name="respuesta1" id="respuesta1" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea>
+				<br><br><br>
+				<h4>¿Cuál es el mensaje del cuento?</h4><br>
+				<textarea name="respuesta2" id="respuesta2" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea>
+				<br><br>
+				<h4>¿Qué hubieras propuesto tú para que los grandes respeten las señales de tránsito regulatorias?</h4><br>
+				<textarea name="respuesta2" id="respuesta2" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea>
+				<br><br>
+				<input type="submit" value="Guardar" class="btn-enviar" id="guardar"/>
+			</form>
+			
+		</section>
+	</main>
+	<footer>
+		<h6>
+			Creative Commons | Power by <a href="">@bekyLuzcando</a>
+		</h6>
+	</footer>
+</body>
+</html>

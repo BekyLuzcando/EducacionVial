@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Actividad 2</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<script type="text/javascript">
+	
+	function validar() {
+		var respuesta1 = document.getElementById("respuesta1").value;
+		var respuesta2 = document.getElementById("respuesta2").value;
+		var respuesta3 = document.getElementById("respuesta3").value;
+		var respuesta4 = document.getElementById("respuesta4").value;
+		var respuesta5 = document.getElementById("respuesta5").value;
+		var respuesta6 = document.getElementById("respuesta6").value;
+		var respuesta7 = document.getElementById("respuesta7").value;
+		var respuesta8 = document.getElementById("respuesta8").value;
+	}
+
+</script>
+
+<script type="text/javascript">
+	//aquí la solución
+
+	var respuestaCorrecta = new Array("pare2", "ceda3", "bicicleta1", "dobleVia3", "compartida1", "30km/h1", "derecha2", "izquierda3");
+			
+			function comprobarRadio(matriz){
+			
+				var numeroRespuestasOK=0;
+				var numeroRespuestasKO=0;
+				var solucion = document.getElementById("solucion");
+				var tablaResultados ="<table border='1'>";
+				
+				for(j=0; j< matriz.length; j++){
+				var radios = document.getElementsByName(j+1);
+					for(i=0; i< radios.length;i++){
+						if (radios[i].checked){
+						var valor =  radios[i].value;
+							if(valor == matriz[j]) {
+							tablaResultados+= "<tr><td>Respuesta correcta: </td>"+ "<td>"+ valor + "</td></tr>";
+							numeroRespuestasOK++;
+							break;
+							}else {
+							tablaResultados+= "<tr><td>Respuesta incorrecta: </td><td>"+ valor + "</td></tr>";
+							numeroRespuestasKO++;
+							break;
+							}
+						}
+					}
+					
+					
+				}
+				var numeroRespuestasNulas=matriz.length - (numeroRespuestasOK + numeroRespuestasKO);
+				tablaResultados+="<tr><td>Respuestas: </td><td>Pare: "+"3"+"<br/>Cada el paso: "+ "3"+"<br/>Derecha Bicicletas: "+ "2"+"<br/>Doble Vía: "+ "2"+"<br/>Vía Compartida: "+ "2"+"<br/>Límite de velocidad 30km/h: "+ "2"+"<br/>Una vía-Derecha: "+ "2"+"<br/>Una vía-Izquierda: "+ "4"+"</td></tr></table>";
+				solucion.innerHTML = tablaResultados;
+		}
+
+	</script>
+
+<body>
+	<header>
+		<h1>Educación Vial para niños</h1>
+		<nav>
+			<a href="menuPrincipal.html">Atrás</a>
+			<a href="../index.php">Salir</a>
+		</nav>
+	</header>
+	
+
+
+	<main>
+		<aside>
+			<section class="uno">
+				<img src="../images/comenta.jpg" title="lapiz" description="idActividad">
+				<section class="activity">
+					<h2>Cuenta</h2>
+					<p class="lead">Cuenta las señales regulatorias iguales y coloca el número en la parte correspondiente</p>
+				</section>
+			</section>
+			<br>
+			<br>
+			<h3>Señales regulatorias</h3>
+			<br>
+			<img class="img2" src="../images/act2.jpg" title="señales" description="act1">
+			
+		</aside>
+		<section>
+			<br>
+			<h3>Cuenta</h3><br><br><br><br><br><br><br>
+			<form name="form" action="logica.php" method="post" onsubmit="return validar();">
+				
+				
+				<div class="row">
+				  <div class="col-sm-8">
+				  <p class="lead">Detención obligatoria - Pare</p><br>
+				  <p class="lead">Ceda el paso</p><br>
+				  <p class="lead">Mantenga derecha bicicletas</p><br>
+				  <p class="lead">Doble vía</p><br>
+				  <p class="lead">Vía compartida peatones y ciclistas</p><br>
+				  <p class="lead">Límite de velocidad 30 km/h</p><br>
+				  <p class="lead">Una vía-derecha</p><br>
+				  <p class="lead">Una vía-izquierda</p><br>
+				  <input type="submit" value="Guardar" class="btn-enviar" id="guardar"/>
+				  </div>
+				  
+
+				  <div class="col-sm-4">
+				  
+				  <div id="contenedor">
+							
+					<table style="float:left;">
+
+					 <tr>
+							<td><p id="pare" class="lead">2  <input type="radio" value="pare1" name="1" /></p></td>
+							<td><p id="pare" class="lead">3 <input type="radio" value="pare2" name="1"/></p></td>
+							<td><p id="pare" class="lead">4 <input type="radio" value="pare3" name="1" /></p></td>
+							<!-- <td>A4<input type="radio" value="a4" name="1" /></td> -->
+					 </tr> 
+					 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+					 <tr>
+							<td><p id="pare" class="lead">5 <input type="radio" value="ceda1" name="2" /></p></p></td>
+							<td><p id="pare" class="lead">2 <input type="radio" value="ceda2" name="2"/></p></p></td>
+							<td><p id="pare" class="lead">3 <input type="radio" value="ceda3" name="2" /></p></p></td>
+							<!-- <td>B4<input type="radio" value="b4" name="2" /></td> -->
+					 </tr> 
+					 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+
+					 <tr>
+							<td><p id="pare" class="lead">2 <input type="radio" value="bicicleta1" name="3" /></p></td>
+							<td><p id="pare" class="lead">3 <input type="radio" value="bicicleta2" name="3"/></p></td>
+							<td><p id="pare" class="lead">4 <input type="radio" value="bicicleta3" name="3" /></p></td>
+							<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+					 </tr> 
+					 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+					 
+					 <tr>
+							<td><p id="pare" class="lead">3 <input type="radio" value="dobleVia1" name="4" /></p></td>
+							<td><p id="pare" class="lead">1 <input type="radio" value="dobleVia2" name="4"/></p></td>
+							<td><p id="pare" class="lead">2 <input type="radio" value="dobleVia3" name="4" /></p></td>
+							<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+					 </tr> 
+					 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+					 <tr>
+							<td><p id="pare" class="lead">2 <input type="radio" value="compartida1" name="5" /></p></td>
+							<td><p id="pare" class="lead">3 <input type="radio" value="compartida2" name="5"/></p></td>
+							<td><p id="pare" class="lead">1 <input type="radio" value="compartida3" name="5" /></p></td>
+							<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+					 </tr> 
+					 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+					 <tr>
+							<td><p id="pare" class="lead">2 <input type="radio" value="30km/h1" name="6" /></p></td>
+							<td><p id="pare" class="lead">4 <input type="radio" value="30km/h2" name="6"/></p></td>
+							<td><p id="pare" class="lead">3 <input type="radio" value="30km/h3" name="6" /></p></td>
+							<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+					 </tr> 
+					 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+					 <tr>
+							<td><p id="pare" class="lead">5 <input type="radio" value="derecha1" name="7" /></p></td>
+							<td><p id="pare" class="lead">2 <input type="radio" value="derecha2" name="7"/></p></td>
+							<td><p id="pare" class="lead">3 <input type="radio" value="derecha3" name="7" /></p></td>
+							<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+					 </tr> 
+					 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+					 <tr>
+							<td><p id="pare" class="lead">1 <input type="radio" value="izquierda1" name="8" /></p></td>
+							<td><p id="pare" class="lead">5 <input type="radio" value="izquierda2" name="8"/></p></td>
+							<td><p id="pare" class="lead">4 <input type="radio" value="izquierda3" name="8" /></p></td>
+							<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+					 </tr> 
+
+					 <tr> <td colspan="2"> <br>
+					 <input type="button" value="Corregir" onclick="comprobarRadio(respuestaCorrecta)" /></td></tr>
+					</table>
+					  <div id="solucion"></div>
+				</div>
+
+				  </div>
+				  </div>
+
+				
+
+			</form>
+			
+			
+		</section>
+	</main>
+	<footer>
+		<h6>
+			Creative Commons | Power by <a href="">@bekyLuzcando</a>
+		</h6>
+	</footer>
+</body>
+</html>

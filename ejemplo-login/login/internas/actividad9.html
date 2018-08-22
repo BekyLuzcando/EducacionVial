@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Actividad ...</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/hojaestilo.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<body>
+	<header>
+		<h1>Educación Vial para niños</h1>
+		<nav>
+			<a href="menuPrincipal2.html">Atrás</a>
+			<a href="../index.php">Salir</a>
+		</nav>
+	</header>
+	
+	<script type="text/javascript">
+	
+		function validar() {
+			var respuesta1 = document.getElementById("respuesta1").value;
+			var respuesta2 = document.getElementById("respuesta2").value;
+		}
+
+	</script>
+
+	<script type="text/javascript">
+		//aquí la solución
+
+		var respuestaCorrecta = new Array("p12", "p21", "p32", "p41", "p51", "p62", "p71", "p82");
+				
+				function comprobarRadio(matriz){
+				
+					var numeroRespuestasOK=0;
+					var numeroRespuestasKO=0;
+					var solucion = document.getElementById("solucion");
+					var tablaResultados ="<table border='1'>";
+					
+					for(j=0; j< matriz.length; j++){
+					var radios = document.getElementsByName(j+1);
+						for(i=0; i< radios.length;i++){
+							if (radios[i].checked){
+							var valor =  radios[i].value;
+								if(valor == matriz[j]) {
+								tablaResultados+= "<tr><td>Respuesta correcta: </td>"+ "<td>"+ valor + "</td></tr>";
+								numeroRespuestasOK++;
+								break;
+								}else {
+								tablaResultados+= "<tr><td>Respuesta incorrecta: </td><td>"+ valor + "</td></tr>";
+								numeroRespuestasKO++;
+								break;
+								}
+							}
+						}
+						
+						
+					}
+					var numeroRespuestasNulas=matriz.length - (numeroRespuestasOK + numeroRespuestasKO);
+					tablaResultados+="<tr><td>Respuestas: </td><td>Pregunta 1: "+"Falso"+"<br/>Pregunta 2: "+ "Verdadero"+"<br/>Pregunta 3: "+ "Falso"+"<br/>Pregunta 4: "+ "Verdadero"+"<br/>Pregunta 5: "+ "Verdadero"+"<br/>Pregunta 6: "+ "Falso"+"<br/>Pregunta 7: "+ "Verdadero"+"<br/>Pregunta 8: "+ "Falso"+"</td></tr></table>";
+					solucion.innerHTML = tablaResultados;
+			}
+
+		</script>
+
+
+	<main>
+
+		<div class="container">
+		  <div class="well"><h2 class="text-center">Otras recomendaciones del bus escolar</h2></div>
+		</div>
+
+		<aside>
+			<section class="uno">
+				<img src="../images/lee.jpg" title="lapiz" description="idActividad">
+				<section class="activity">
+					<h2>Lee y responde</h2>
+					<h4>Lee las recomendaciones que debes tener en cuenta antes de y durante el viaje en el bus escolar, luego responde las preguntas</h4>
+
+				<p class="lead"><b>En el bus</b></p>
+
+				<p class="lead" style="color:#4FC3F7;">Evitar gritar, tirar papeles o realizar juegos que puedan distraer al conductor.</p>
+
+				<p class="lead" style="color:#B39DDB;">Sigue las instrucciones de la persona encargada de los viajeros y, en caso de emergencia, sigue en todo momento las instrucciones del monitor o conductor.</p>
+
+				<p class="lead" style="color:#64DD17;">No te asomes por las ventanillas.</p>
+
+				<p class="lead" style="color:#4FC3F7;">Cede el asiento a las personas que más lo necesitan, tales como: discapacitados, niños más pequeños o compañeros accidentados.</p>
+
+				<p class="lead" style="color:#B39DDB;">No te levantes del asiento hasta que el bus se haya detenido.</p>
+
+				<p class="lead"><b>Al bajar del bus</b></p>
+
+				<p class="lead" style="color:#4FC3F7;">Evita levantarte cuando el vehículo esté en movimiento, dado que si el bus frena repentinamente, te puedes hacer daño.</p>
+
+				<p class="lead" style="color:#B39DDB;">Baja de manera ordenada respetando el turno de salida.</p>
+
+				<p class="lead" style="color:#64DD17;">Al momento de bajar ayuda a personas que por su condición física no puedan hacerlo por sí solas.</p>
+
+				<p class="lead" style="color:#4FC3F7;">Antes de bajar, mira de izquierda a derecha, con el fin de evitar sorpresas o sustos, dado que pueden venir posibles coches, ciclistas o ciclomotores.</p>
+
+				<p class="lead" style="color:#B39DDB;">Una vez fuera del bus, dirígete a un lugar seguro sin correr.</p>
+
+				<p class="lead"><b>Recuerda</b></p>
+
+				<p class="lead" style="color:#64DD17;">Llega pronto a la parada, sin correr y por la acera.</p>
+
+				<p class="lead" style="color:#4FC3F7;">En la parada, respeta la cola.</p>
+
+				<p class="lead" style="color:#B39DDB;">No subas o bajes del bus hasta que haya detenido completamente.</p>
+
+				<p class="lead" style="color:#64DD17;">En el bus no te levantes del sitio hasta llegar a tu destino.</p>
+
+				<p class="lead" style="color:#4FC3F7;">Ayuda y cede tu asiento a quién lo necesite.</p>
+
+				<p class="lead" style="color:#B39DDB;">Recuerda que el conductor es tu amigo. Ayúdale.</p>
+
+				<p><b>Adaptado de:</b> Race (2014). Usar de forma segura el transporte escolar y público: premioseducacionvial. Recuperado de <a href="https://www.premioseducacionvial.com/educacion-vial/transporte-escolar-y-publico">https://www.premioseducacionvial.com/educacion-vial/transporte-escolar-y-publico</a></p>
+				</section>
+
+			</section>
+			
+		</aside>
+		<section>
+			<br>
+			<h3>En base a la lectura, responde <b>V</b> si es Verdadero o <b>F</b> si es Falso a los siguientes enunciados:</h3>
+			<form name="form" action="logica.php" method="post" onsubmit="return validar();">
+				<br>
+				<div class="row"><br><br>
+				  <div class="col-sm-8">
+				  <p class="lead">Cuando estés en el bus, debes asomarte por las ventanillas</p><br><br>
+				  <p class="lead">Debes ceder el asiento a las personas que más lo necesitan</p><br><br>
+				  <p class="lead">Puedes levantarte del asiento cuando el bus aún esté en movimiento</p><br><br>
+				  <p class="lead">Durante el viaje, no molestes al conductor</p><br><br>
+				  <p class="lead">Durante el viaje, no debes levantarte de tu asiento</p><br><br>
+				  <p class="lead">Durante el viaje, no usus el cinturón de seguridad</p><br><br>
+				  <p class="lead">Debes bajar o subir del bus respetando el turno de cada compañero</p><br><br>
+				  <p class="lead">Cuando te bajes, puedes correr a la escuela</p><br><br>
+				  <input type="submit" value="Guardar" class="btn-enviar" id="guardar"/>
+				  </div>
+
+				  <div class="col-sm-4">
+				  
+				  	<div id="contenedor">
+							
+					<table style="float:left; border: 1px solid white; margin-right:.3em; width: 100%;">
+					 <tr>
+							<td><p id="pare" class="lead">Verdadero <input type="radio" value="p31" name="1" /></p></td>
+							<td><p id="pare" class="lead">Falso <input type="radio" value="p32" name="1"/></p></td>
+							<!-- <td><p id="pare" class="lead">4 niños <input type="radio" value="niño3" name="1" /></p></td> -->
+							<!-- <td>A4<input type="radio" value="a4" name="1" /></td> -->
+					 </tr> 
+					 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+					 <tr>
+							<td><p id="pare" class="lead">Verdadero <input type="radio" value="p31" name="2" /></p></p></td>
+							<td><p id="pare" class="lead">Falso <input type="radio" value="p32" name="2"/></p></p></td>
+							<!-- <td><p id="pare" class="lead">2 estudiantes <input type="radio" value="estudiante3" name="2" /></p></p></td> -->
+							<!-- <td>B4<input type="radio" value="b4" name="2" /></td> -->
+					 </tr> 
+					 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+					 
+					 <tr>
+							<td><p id="pare" class="lead">Verdadero <input type="radio" value="p31" name="3" /></p></td>
+							<td><p id="pare" class="lead">Falso <input type="radio" value="p32" name="3"/></p></td>
+							<!-- <td><p id="pare" class="lead">6 peatones <input type="radio" value="peaton3" name="3" /></p></td> -->
+							<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+					 </tr> 
+					 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+					 
+					 <tr>
+							<td><p id="pare" class="lead">Verdadero <input type="radio" value="p41" name="4" /></p></td>
+							<td><p id="pare" class="lead">Falso <input type="radio" value="p42" name="4"/></p></td>
+							<!-- <td><p id="pare" class="lead">11 peatones <input type="radio" value="total3" name="4" /></p></td> -->
+							<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+					 </tr> 
+					  <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+					 <tr>
+							<td><p id="pare" class="lead">Verdadero <input type="radio" value="p51" name="5" /></p></td>
+							<td><p id="pare" class="lead">Falso <input type="radio" value="p52" name="5"/></p></td>
+							<!-- <td><p id="pare" class="lead">11 peatones <input type="radio" value="total3" name="4" /></p></td> -->
+							<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+					 </tr>
+					  <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+					 <tr>
+							<td><p id="pare" class="lead">Verdadero <input type="radio" value="p61" name="6" /></p></td>
+							<td><p id="pare" class="lead">Falso <input type="radio" value="p62" name="6"/></p></td>
+							<!-- <td><p id="pare" class="lead">11 peatones <input type="radio" value="total3" name="4" /></p></td> -->
+							<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+					 </tr>
+					  <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+					 <tr>
+							<td><p id="pare" class="lead">Verdadero <input type="radio" value="p71" name="7" /></p></td>
+							<td><p id="pare" class="lead">Falso <input type="radio" value="p72" name="7"/></p></td>
+							<!-- <td><p id="pare" class="lead">11 peatones <input type="radio" value="total3" name="4" /></p></td> -->
+							<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+					 </tr>
+					  <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+					 <tr>
+							<td><p id="pare" class="lead">Verdadero <input type="radio" value="p81" name="8" /></p></td>
+							<td><p id="pare" class="lead">Falso <input type="radio" value="p82" name="8"/></p></td>
+							<!-- <td><p id="pare" class="lead">11 peatones <input type="radio" value="total3" name="4" /></p></td> -->
+							<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+					 </tr>
+
+					 <tr> <td colspan="2"> <br><br>
+					 <input type="button" value="Corregir" onclick="comprobarRadio(respuestaCorrecta)" /></td></tr>
+					</table>
+					  <div id="solucion"></div>
+					</div>
+
+
+				  </div>
+
+				  </div>
+				
+				
+			</form>
+			
+		</section>
+	</main>
+	<footer>
+		<h6>
+			Creative Commons | Power by <a href="">@bekyLuzcando</a>
+		</h6>
+	</footer>
+</body>
+</html>

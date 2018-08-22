@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Actividad ...</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<body>
+	<header>
+		<h1>Educación Vial para niños</h1>
+		<nav>
+			<a href="menuPrincipal2.html">Atrás</a>
+			<a href="../index.php">Salir</a>
+		</nav>
+	</header>
+	
+	<script type="text/javascript">
+	
+		function validar() {
+			var respuesta1 = document.getElementById("respuesta1").value;
+			var respuesta2 = document.getElementById("respuesta2").value;
+		}
+
+	</script>
+
+	<main>
+
+		<div class="container">
+		  <div class="well"><h2 class="text-center">¿Qué sabemos de los peatones?</h2></div>
+
+		  <form name="form" action="logica.php" method="post" onsubmit="return validar();">
+			
+				<div class="row">
+				  <div class="col-sm-2"><img class="border" src="../images/icono.jpg" title="lapiz" description="idActividad"></div>
+				  <div class="col-sm-10"><h2>Responde</h2>
+					<h4>En base a lo aprendido, responde con tus propias palabras, las siguientes preguntas</h4></div>
+				</div><br><br>
+				<p class="lead"><b style="color:#4FC3F7;">¿Qué es un peatón?</b></p><br>
+				<textarea name="respuesta1" id="respuesta1" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea><br><br>
+				<p class="lead"><b style="color:#B39DDB;">¿Qué actitudes de un peatón puede llevar a ocaasionar accidentes (Menciona dos)?</b></p><br>
+				<textarea name="respuesta1" id="respuesta1" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea><br><br>
+				<p class="lead"><b style="color:#64DD17;">Escribe tus siete compromisos para ser un buen peatón</b></p><br>
+				<textarea name="respuesta1" id="respuesta1" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea><br><br><br><br>
+
+				
+				<input type="submit" value="Guardar" class="btn-enviar" id="guardar"/><br><br><br>
+
+		</div>
+
+			
+
+			
+			</form>
+			
+		
+	</main>
+	<footer>
+		<h6>
+			Creative Commons | Power by <a href="">@bekyLuzcando</a>
+		</h6>
+	</footer>
+</body>
+</html>

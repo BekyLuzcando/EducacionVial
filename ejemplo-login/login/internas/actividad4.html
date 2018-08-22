@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Actividad 4</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+</head>
+
+
+
+<body>
+	<header>
+		<h1>Educación Vial para niños</h1>
+		<nav>
+			<a href="menuPrincipal.html">Atrás</a>
+			<a href="../index.php">Salir</a>
+		</nav>
+	</header>
+	
+	<script type="text/javascript">
+	
+		function validar() {
+			var respuesta1 = document.getElementById("respuesta1").value;
+			var respuesta2 = document.getElementById("respuesta2").value;
+		}
+
+	</script>
+
+	<main>
+		<aside>
+			<section class="uno">
+				<img src="../images/comenta.jpg" title="lapiz" description="idActividad">
+				<section class="activity">
+					<h2>Comenta</h2>
+					<p>Observa las señales ¿las has visto en otros lugares? ¿en dónde? ¿para qué crees que sirven?</p>
+				</section>
+			</section>
+			<br>
+			<br>
+			<h3>Señales regulatorias</h3>
+			<br><br>
+			<img class="img2" src="../images/act4.jpg" title="señales" description="act1">
+		</aside>
+		<section>
+			<br><br><br><br><br><br>
+			<h3>Comenta</h3>
+			<p>Deja aquí tu comentario sobre las señales indicadas</p><br><br>
+			<form name="form" action="logica.php" method="post" onsubmit="return validar();">
+				<textarea name="respuesta1" id="respuesta1" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea>
+				<br><br><br>
+				<h3>Responde</h3>
+				<p>¿Qué colores tienen las señales regulatorias? ¿qué formas tienen?</p><br>
+				<textarea name="respuesta2" id="respuesta2" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea>
+				<br><br>
+				<input type="submit" value="Guardar" class="btn-enviar" id="guardar"/>
+			</form>
+			
+		</section>
+	</main>
+	<footer>
+		<h6>
+			Creative Commons | Power by <a href="">@bekyLuzcando</a>
+		</h6>
+	</footer>
+</body>
+</html>

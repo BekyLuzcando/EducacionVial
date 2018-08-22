@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Actividad ...</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/hojaestilo.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<body>
+	<header>
+		<h1>Educación Vial para niños</h1>
+		<nav>
+			<a href="menuPrincipal2.html">Atrás</a>
+			<a href="../index.php">Salir</a>
+		</nav>
+	</header>
+	
+	<script type="text/javascript">
+	
+		function validar() {
+			var respuesta1 = document.getElementById("respuesta1").value;
+			var respuesta2 = document.getElementById("respuesta2").value;
+		}
+
+	</script>
+
+	<main>
+
+		<div class="container">
+		  <div class="well"><h2 class="text-center">A tomar el bus escolar</h2></div>
+		</div>
+
+		<aside>
+			<section class="uno">
+				<img src="../images/lee.jpg" title="lapiz" description="idActividad">
+				<section class="activity">
+					<h2>Lee y responde</h2>
+					<h4>Lee las recomendaciones que debes tener en cuenta antes de viajar en el bus escolar y durante su abordaje, luego responde las preguntas</h4>
+
+				<p><b>Antes de iniciar el viaje</b></p>
+					<p class="lead" style="color:#4FC3F7;">De camino a la parada, utiliza los pasos destinados para los peatones y respeta las normas de circulación peatonal, incluso cuando tengas prisa.</p>
+				<p class="lead" style="color:#B39DDB;">Llega a la parada del bus con antelación. Llega a la parada sin correr, evitando de esta manera que cruces la calzada sin mirar o el nerviosismo que puedes sentir por perder el bus.</p>
+
+				<p class="lead" style="color:#64DD17;">Espera el bus en los sitios autorizados. De no existir parada de bus, deberás esperar siempre en la acera.</p>
+
+				<p class="lead" style="color:#4FC3F7;">Respeta, en la parada de bus, el sitio correspondiente a tus compañeros, colocándote detrás de la última persona y no intentes ponerte delante de los demás compañeros. Cumple esta regla y has que el resto la cumpla.</p>
+
+				<p class="lead" style="color:#B39DDB;">No empujes ni molestes a tus compañeros. No promulgues las conductas arriesgadas como los juegos de lucha y evita aquellos que impliquen carreras o desplazamientos bruscos.</p>
+
+				<p><b>En la subida al bus</b></p>
+
+					<p class="lead" style="color:#4FC3F7;">Dirígete al bus despacio, sin correr y sin empujones.</p>
+
+				<p class="lead" style="color:#B39DDB;">Sube al bus cuando éste esté completamente parado. Si existe alguna persona mayor que dirige la embarcación, espera la indicación de subir. Y una vez que inicies la subida, no te detengas en la escalera del bus.</p>
+
+				<p class="lead" style="color:#64DD17;">Realiza la subida al bus de manera ordenada y respetando el turno de tus compañeros.</p>
+
+				<p class="lead" style="color:#4FC3F7;">Ayuda a las personas que por su condición física tengan dificultades para subir al bus.</p>
+
+				<p class="lead" style="color:#B39DDB;">Una vez subidos en el bus, colócate en los asientos con el cinturón de seguridad. No debes correr ni molestar al conductor.</p>
+
+				<p><b>Adaptado de:</b> Race (2014). Usar de forma segura el transporte escolar y público: premioseducacionvial. Recuperado de <a href="https://www.premioseducacionvial.com/educacion-vial/transporte-escolar-y-publico">https://www.premioseducacionvial.com/educacion-vial/transporte-escolar-y-publico</a></p>
+				</section>
+
+			</section>
+			
+		</aside>
+		<section>
+			<br>
+			<h3>Resume las recomendaciones que debes tomar en cuenta antes de iniciar el viaje en bus</h3>
+			<form name="form" action="logica.php" method="post" onsubmit="return validar();">
+				<br>
+				<textarea name="respuesta1" id="respuesta1" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea>
+				<br><br><br>
+				<h4>Resume las recomendaciones que debes tomar en cuenta durante la subida al bus</h4><br>
+				<textarea name="respuesta2" id="respuesta2" rows="5" cols="20" placeholder="Escribe aquí tu respuesta"></textarea>
+				
+				<input type="submit" value="Guardar" class="btn-enviar" id="guardar"/>
+			</form>
+			
+		</section>
+	</main>
+	<footer>
+		<h6>
+			Creative Commons | Power by <a href="">@bekyLuzcando</a>
+		</h6>
+	</footer>
+</body>
+</html>

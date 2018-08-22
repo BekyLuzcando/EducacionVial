@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Actividad ...</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/hojaestilo.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<body>
+	<header>
+		<h1>Educación Vial para niños</h1>
+		<nav>
+			<a href="menuPrincipal.html">Atrás</a>
+			<a href="../index.php">Salir</a>
+		</nav>
+	</header>
+	
+	<script type="text/javascript">
+	
+		function validar() {
+			var respuesta = document.getElementById("respuesta").value;
+		}
+
+	</script>
+
+
+	<script type="text/javascript">
+	//aquí la solución
+
+	var respuestaCorrecta = new Array("niño2", "estudiante1", "peaton3", "total2");
+			
+			function comprobarRadio(matriz){
+			
+				var numeroRespuestasOK=0;
+				var numeroRespuestasKO=0;
+				var solucion = document.getElementById("solucion");
+				var tablaResultados ="<table border='1'>";
+				
+				for(j=0; j< matriz.length; j++){
+				var radios = document.getElementsByName(j+1);
+					for(i=0; i< radios.length;i++){
+						if (radios[i].checked){
+						var valor =  radios[i].value;
+							if(valor == matriz[j]) {
+							tablaResultados+= "<tr><td>Respuesta correcta: </td>"+ "<td>"+ valor + "</td></tr>";
+							numeroRespuestasOK++;
+							break;
+							}else {
+							tablaResultados+= "<tr><td>Respuesta incorrecta: </td><td>"+ valor + "</td></tr>";
+							numeroRespuestasKO++;
+							break;
+							}
+						}
+					}
+					
+					
+				}
+				var numeroRespuestasNulas=matriz.length - (numeroRespuestasOK + numeroRespuestasKO);
+				tablaResultados+="<tr><td>Respuestas: </td><td>Caminan en la acera: "+"5 niños"+"<br/>Puente peatonal: "+ "4 estudiantes"+"<br/>Cruzar la calle: "+ "6 peatones"+"<br/>Total: "+ "15 peatones"+"</td></tr></table>";
+				solucion.innerHTML = tablaResultados;
+		}
+
+	</script>
+
+	<main>
+		<aside>
+			<section class="uno">
+				<img class="border" src="../images/icono.jpg" title="lapiz" description="idActividad">
+				<section class="activity">
+					<div class="row">
+				  <div class="col-sm-1"></div>
+				  <div class="col-sm-11"><h2>Responde de acuerdo a la pregunta</h2>
+					<h4>Lee las preguntas y responde</h4></div>
+				</div><br><br>
+				</section>
+			</section>
+			
+				<form name="form" action="logica.php" method="post" onsubmit="return validar();">
+			
+				
+				<p class="lead">Marcelo y sus cuatro amiguitos siempre caminan por la acera, cuidándose de los peligros de la calle.<b style="color:#4FC3F7;">¿Cuántos niños caminan por la acera?</b></p><br>
+				
+				<p class="lead">Luis camina todos los días con tres compañeros a la escuela. Ellos siempre usan el paso peatonal, porque ayuda a evitar accidentes.<b style="color:#B39DDB;">¿Cuántos estudiantes usan el puente peatonal?</b> </p><br>
+				
+				<p class="lead">María y cinco compañeros esperan cruzar en una intersección. Todos, excepto uno, miran atentamente el semáforo antes de cruzar la calle.<b style="color:#64DD17;">¿Cuántos peatones hay esperando cruzar la calle?</b></p><br>
+				
+				
+				<div class="row">
+				  <div class="col-sm-2"><img class="border" src="../images/icono.jpg" title="lapiz" description="idActividad"></div>
+				  <div class="col-sm-10"><h2>Calcula</h2>
+					<h4>Suma los peatones que contaste anteriormente y escribe tu respuesta</h4></div>
+				</div>
+
+					<br><br>
+					
+				<input type="submit" value="Guardar" class="btn-enviar" id="guardar"/><br><br><br>
+
+		</div>
+
+			
+
+			
+			</form>
+		 							 
+		</aside>
+		<section>
+			<br>
+			<br><br><br><br><br>
+							<div id="contenedor">
+							
+							<table style="float:left; border: 1px solid white; margin-right:.5em; width: 100%;">
+							 <tr><br><br>
+									<td><p id="pare" class="lead">3 niños <input type="radio" value="niño1" name="1" /></p></td>
+									<td><p id="pare" class="lead">5 niños <input type="radio" value="niño2" name="1"/></p></td>
+									<td><p id="pare" class="lead">4 niños <input type="radio" value="niño3" name="1" /></p></td>
+									<!-- <td>A4<input type="radio" value="a4" name="1" /></td> -->
+							 </tr> 
+							 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+							 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+							 <tr>
+									<td><p id="pare" class="lead">4 estudiantes <input type="radio" value="estudiante1" name="2" /></p></p></td>
+									<td><p id="pare" class="lead">6 estudiantes <input type="radio" value="estudiante2" name="2"/></p></p></td>
+									<td><p id="pare" class="lead">2 estudiantes <input type="radio" value="estudiante3" name="2" /></p></p></td>
+									<!-- <td>B4<input type="radio" value="b4" name="2" /></td> -->
+							 </tr> 
+							 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+							 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+							 
+							 <tr>
+									<td><p id="pare" class="lead">5 peatones <input type="radio" value="peaton1" name="3" /></p></td>
+									<td><p id="pare" class="lead">1 peatón <input type="radio" value="peaton2" name="3"/></p></td>
+									<td><p id="pare" class="lead">6 peatones <input type="radio" value="peaton3" name="3" /></p></td>
+									<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+							 </tr> 
+							 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+							 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+							 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+							 <tr class="blanco"><td>---</td><td>---</td><td>---</td></tr>
+							 <tr>
+									<td><p id="pare" class="lead">10 peatones <input type="radio" value="total1" name="4" /></p></td>
+									<td><p id="pare" class="lead">15 peatones <input type="radio" value="total2" name="4"/></p></td>
+									<td><p id="pare" class="lead">11 peatones <input type="radio" value="total3" name="4" /></p></td>
+									<!-- <td>C4<input type="radio" value="c4" name="3" /></td> -->
+							 </tr> 
+
+							 <tr> <td colspan="2"> <br>
+							 <input type="button" value="Corregir" onclick="comprobarRadio(respuestaCorrecta)" /></td></tr>
+							</table>
+							  <div id="solucion"></div>
+							</div>
+			
+		</section>
+	</main>
+	<footer>
+		<h6>
+			Creative Commons | Power by <a href="">@bekyLuzcando</a>
+		</h6>
+	</footer>
+</body>
+</html>
